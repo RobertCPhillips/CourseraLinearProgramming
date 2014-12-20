@@ -1,0 +1,1462 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1695B623-E4FA-4AFA-BC77-9405E2A84AA5}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MyLinearProgramSolver.Tests</RootNamespace>
+    <AssemblyName>MyLinearProgramSolver.Tests</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    <ReferencePath>$(ProgramFiles)\Common Files\microsoft shared\VSTT\$(VisualStudioVersion)\UITestExtensionPackages</ReferencePath>
+    <IsCodedUITest>False</IsCodedUITest>
+    <TestProjectType>UnitTest</TestProjectType>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Should">
+      <HintPath>..\packages\Should.1.1.20\lib\Should.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+  </ItemGroup>
+  <Choose>
+    <When Condition="('$(VisualStudioVersion)' == '10.0' or '$(VisualStudioVersion)' == '') and '$(TargetFrameworkVersion)' == 'v3.5'">
+      <ItemGroup>
+        <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+      </ItemGroup>
+    </When>
+    <Otherwise>
+      <ItemGroup>
+        <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework" />
+      </ItemGroup>
+    </Otherwise>
+  </Choose>
+  <ItemGroup>
+    <Compile Include="Assignment1PivotTests.cs" />
+    <Compile Include="Assignment2SolverTests.cs" />
+    <Compile Include="Assignment3SolverTests.cs" />
+    <Compile Include="MapPrimalToDualTests.cs" />
+    <Compile Include="RestoreObjectiveTests.cs" />
+    <Compile Include="ShouldHelpers.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="part1TestCases\instructions.PDF" />
+    <None Include="part1TestCases\unitTests\dict1">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="part1TestCases\unitTests\dict1.output" />
+    <None Include="part1TestCases\unitTests\dict10">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="part1TestCases\unitTests\dict10.output" />
+    <None Include="part1TestCases\unitTests\dict2">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="part1TestCases\unitTests\dict2.output" />
+    <None Include="part1TestCases\unitTests\dict3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="part1TestCases\unitTests\dict3.output" />
+    <None Include="part1TestCases\unitTests\dict4">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="part1TestCases\unitTests\dict4.output" />
+    <None Include="part1TestCases\unitTests\dict5">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="part1TestCases\unitTests\dict5.output" />
+    <None Include="part1TestCases\unitTests\dict6">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="part1TestCases\unitTests\dict6.output" />
+    <None Include="part1TestCases\unitTests\dict7">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="part1TestCases\unitTests\dict7.output" />
+    <None Include="part1TestCases\unitTests\dict8">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="part1TestCases\unitTests\dict8.output" />
+    <None Include="part1TestCases\unitTests\dict9">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="part1TestCases\unitTests\dict9.output" />
+    <None Include="part1TestCases\unitTests\printPivots.PDF" />
+    <None Include="part1TestCases\unitTests\README" />
+    <None Include="part2TestCases\instructions.pdf" />
+    <None Include="part2TestCases\programmingAssignment2.pdf" />
+    <None Include="part2TestCases\unitTests\dict1">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="part2TestCases\unitTests\dict1.ampl" />
+    <None Include="part2TestCases\unitTests\dict1.math" />
+    <None Include="part2TestCases\unitTests\dict1.output" />
+    <None Include="part2TestCases\unitTests\dict10">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="part2TestCases\unitTests\dict10.ampl" />
+    <None Include="part2TestCases\unitTests\dict10.math" />
+    <None Include="part2TestCases\unitTests\dict10.output" />
+    <None Include="part2TestCases\unitTests\dict2">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="part2TestCases\unitTests\dict2.ampl" />
+    <None Include="part2TestCases\unitTests\dict2.math" />
+    <None Include="part2TestCases\unitTests\dict2.output" />
+    <None Include="part2TestCases\unitTests\dict3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="part2TestCases\unitTests\dict3.ampl" />
+    <None Include="part2TestCases\unitTests\dict3.math" />
+    <None Include="part2TestCases\unitTests\dict3.output" />
+    <None Include="part2TestCases\unitTests\dict4">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="part2TestCases\unitTests\dict4.ampl" />
+    <None Include="part2TestCases\unitTests\dict4.math" />
+    <None Include="part2TestCases\unitTests\dict4.output" />
+    <None Include="part2TestCases\unitTests\dict5">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="part2TestCases\unitTests\dict5.ampl" />
+    <None Include="part2TestCases\unitTests\dict5.math" />
+    <None Include="part2TestCases\unitTests\dict5.output" />
+    <None Include="part2TestCases\unitTests\dict6">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="part2TestCases\unitTests\dict6.ampl" />
+    <None Include="part2TestCases\unitTests\dict6.math" />
+    <None Include="part2TestCases\unitTests\dict6.output" />
+    <None Include="part2TestCases\unitTests\dict7">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="part2TestCases\unitTests\dict7.ampl" />
+    <None Include="part2TestCases\unitTests\dict7.math" />
+    <None Include="part2TestCases\unitTests\dict7.output" />
+    <None Include="part2TestCases\unitTests\dict8">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="part2TestCases\unitTests\dict8.ampl" />
+    <None Include="part2TestCases\unitTests\dict8.math" />
+    <None Include="part2TestCases\unitTests\dict8.output" />
+    <None Include="part2TestCases\unitTests\dict9">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="part2TestCases\unitTests\dict9.ampl" />
+    <None Include="part2TestCases\unitTests\dict9.math" />
+    <None Include="part2TestCases\unitTests\dict9.output" />
+    <None Include="part2TestCases\unitTests\printOut.pdf" />
+    <None Include="part2TestCases\unitTests\README" />
+    <None Include="part3TestCases\fromLecture\vl1.dict">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="part3TestCases\unitTests\10\check.sh" />
+    <None Include="part3TestCases\unitTests\10\test.csv" />
+    <None Include="part3TestCases\unitTests\10\test0.ampl" />
+    <None Include="part3TestCases\unitTests\10\test0.aux" />
+    <None Include="part3TestCases\unitTests\10\test0.dict">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="part3TestCases\unitTests\10\test0.log" />
+    <None Include="part3TestCases\unitTests\10\test0.output" />
+    <None Include="part3TestCases\unitTests\10\test0.pdf" />
+    <None Include="part3TestCases\unitTests\10\test0.synctex.gz" />
+    <None Include="part3TestCases\unitTests\10\test1.ampl" />
+    <None Include="part3TestCases\unitTests\10\test1.aux" />
+    <None Include="part3TestCases\unitTests\10\test1.dict">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="part3TestCases\unitTests\10\test1.log" />
+    <None Include="part3TestCases\unitTests\10\test1.output" />
+    <None Include="part3TestCases\unitTests\10\test1.pdf" />
+    <None Include="part3TestCases\unitTests\10\test1.synctex.gz" />
+    <None Include="part3TestCases\unitTests\10\test10.ampl" />
+    <None Include="part3TestCases\unitTests\10\test10.dict">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="part3TestCases\unitTests\10\test10.output" />
+    <None Include="part3TestCases\unitTests\10\test11.ampl" />
+    <None Include="part3TestCases\unitTests\10\test11.dict">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="part3TestCases\unitTests\10\test11.output" />
+    <None Include="part3TestCases\unitTests\10\test12.ampl" />
+    <None Include="part3TestCases\unitTests\10\test12.aux" />
+    <None Include="part3TestCases\unitTests\10\test12.dict">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="part3TestCases\unitTests\10\test12.log" />
+    <None Include="part3TestCases\unitTests\10\test12.output" />
+    <None Include="part3TestCases\unitTests\10\test12.pdf" />
+    <None Include="part3TestCases\unitTests\10\test12.synctex.gz" />
+    <None Include="part3TestCases\unitTests\10\test13.ampl" />
+    <None Include="part3TestCases\unitTests\10\test13.aux" />
+    <None Include="part3TestCases\unitTests\10\test13.dict">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="part3TestCases\unitTests\10\test13.log" />
+    <None Include="part3TestCases\unitTests\10\test13.output" />
+    <None Include="part3TestCases\unitTests\10\test13.pdf" />
+    <None Include="part3TestCases\unitTests\10\test13.synctex.gz" />
+    <None Include="part3TestCases\unitTests\10\test14.ampl" />
+    <None Include="part3TestCases\unitTests\10\test14.dict">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="part3TestCases\unitTests\10\test14.output" />
+    <None Include="part3TestCases\unitTests\10\test15.ampl" />
+    <None Include="part3TestCases\unitTests\10\test15.dict" />
+    <None Include="part3TestCases\unitTests\10\test15.output" />
+    <None Include="part3TestCases\unitTests\10\test16.ampl" />
+    <None Include="part3TestCases\unitTests\10\test16.dict" />
+    <None Include="part3TestCases\unitTests\10\test16.output" />
+    <None Include="part3TestCases\unitTests\10\test17.ampl" />
+    <None Include="part3TestCases\unitTests\10\test17.dict" />
+    <None Include="part3TestCases\unitTests\10\test17.output" />
+    <None Include="part3TestCases\unitTests\10\test18.ampl" />
+    <None Include="part3TestCases\unitTests\10\test18.dict" />
+    <None Include="part3TestCases\unitTests\10\test18.output" />
+    <None Include="part3TestCases\unitTests\10\test19.ampl" />
+    <None Include="part3TestCases\unitTests\10\test19.dict" />
+    <None Include="part3TestCases\unitTests\10\test19.output" />
+    <None Include="part3TestCases\unitTests\10\test2.ampl" />
+    <None Include="part3TestCases\unitTests\10\test2.dict" />
+    <None Include="part3TestCases\unitTests\10\test2.output" />
+    <None Include="part3TestCases\unitTests\10\test20.ampl" />
+    <None Include="part3TestCases\unitTests\10\test20.dict" />
+    <None Include="part3TestCases\unitTests\10\test20.output" />
+    <None Include="part3TestCases\unitTests\10\test21.ampl" />
+    <None Include="part3TestCases\unitTests\10\test21.dict" />
+    <None Include="part3TestCases\unitTests\10\test21.output" />
+    <None Include="part3TestCases\unitTests\10\test22.ampl" />
+    <None Include="part3TestCases\unitTests\10\test22.dict">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="part3TestCases\unitTests\10\test22.output" />
+    <None Include="part3TestCases\unitTests\10\test23.ampl" />
+    <None Include="part3TestCases\unitTests\10\test23.dict" />
+    <None Include="part3TestCases\unitTests\10\test23.output" />
+    <None Include="part3TestCases\unitTests\10\test24.ampl" />
+    <None Include="part3TestCases\unitTests\10\test24.dict" />
+    <None Include="part3TestCases\unitTests\10\test24.output" />
+    <None Include="part3TestCases\unitTests\10\test25.ampl" />
+    <None Include="part3TestCases\unitTests\10\test25.dict" />
+    <None Include="part3TestCases\unitTests\10\test25.output" />
+    <None Include="part3TestCases\unitTests\10\test26.ampl" />
+    <None Include="part3TestCases\unitTests\10\test26.dict" />
+    <None Include="part3TestCases\unitTests\10\test26.output" />
+    <None Include="part3TestCases\unitTests\10\test27.ampl" />
+    <None Include="part3TestCases\unitTests\10\test27.dict" />
+    <None Include="part3TestCases\unitTests\10\test27.output" />
+    <None Include="part3TestCases\unitTests\10\test28.ampl" />
+    <None Include="part3TestCases\unitTests\10\test28.dict" />
+    <None Include="part3TestCases\unitTests\10\test28.output" />
+    <None Include="part3TestCases\unitTests\10\test29.ampl" />
+    <None Include="part3TestCases\unitTests\10\test29.dict" />
+    <None Include="part3TestCases\unitTests\10\test29.output" />
+    <None Include="part3TestCases\unitTests\10\test3.ampl" />
+    <None Include="part3TestCases\unitTests\10\test3.dict" />
+    <None Include="part3TestCases\unitTests\10\test3.output" />
+    <None Include="part3TestCases\unitTests\10\test30.ampl" />
+    <None Include="part3TestCases\unitTests\10\test30.dict" />
+    <None Include="part3TestCases\unitTests\10\test30.output" />
+    <None Include="part3TestCases\unitTests\10\test31.ampl" />
+    <None Include="part3TestCases\unitTests\10\test31.dict" />
+    <None Include="part3TestCases\unitTests\10\test31.output" />
+    <None Include="part3TestCases\unitTests\10\test32.ampl" />
+    <None Include="part3TestCases\unitTests\10\test32.dict" />
+    <None Include="part3TestCases\unitTests\10\test32.output" />
+    <None Include="part3TestCases\unitTests\10\test33.ampl" />
+    <None Include="part3TestCases\unitTests\10\test33.dict" />
+    <None Include="part3TestCases\unitTests\10\test33.output" />
+    <None Include="part3TestCases\unitTests\10\test34.ampl" />
+    <None Include="part3TestCases\unitTests\10\test34.dict" />
+    <None Include="part3TestCases\unitTests\10\test34.output" />
+    <None Include="part3TestCases\unitTests\10\test35.ampl" />
+    <None Include="part3TestCases\unitTests\10\test35.dict" />
+    <None Include="part3TestCases\unitTests\10\test35.output" />
+    <None Include="part3TestCases\unitTests\10\test35.pdf" />
+    <None Include="part3TestCases\unitTests\10\test36.ampl" />
+    <None Include="part3TestCases\unitTests\10\test36.dict" />
+    <None Include="part3TestCases\unitTests\10\test36.output" />
+    <None Include="part3TestCases\unitTests\10\test37.ampl" />
+    <None Include="part3TestCases\unitTests\10\test37.dict" />
+    <None Include="part3TestCases\unitTests\10\test37.output" />
+    <None Include="part3TestCases\unitTests\10\test38.ampl" />
+    <None Include="part3TestCases\unitTests\10\test38.dict" />
+    <None Include="part3TestCases\unitTests\10\test38.output" />
+    <None Include="part3TestCases\unitTests\10\test39.ampl" />
+    <None Include="part3TestCases\unitTests\10\test39.dict" />
+    <None Include="part3TestCases\unitTests\10\test39.output" />
+    <None Include="part3TestCases\unitTests\10\test4.ampl" />
+    <None Include="part3TestCases\unitTests\10\test4.dict" />
+    <None Include="part3TestCases\unitTests\10\test4.output" />
+    <None Include="part3TestCases\unitTests\10\test40.ampl" />
+    <None Include="part3TestCases\unitTests\10\test40.dict" />
+    <None Include="part3TestCases\unitTests\10\test40.output" />
+    <None Include="part3TestCases\unitTests\10\test41.ampl" />
+    <None Include="part3TestCases\unitTests\10\test41.dict" />
+    <None Include="part3TestCases\unitTests\10\test41.output" />
+    <None Include="part3TestCases\unitTests\10\test42.ampl" />
+    <None Include="part3TestCases\unitTests\10\test42.dict" />
+    <None Include="part3TestCases\unitTests\10\test42.output" />
+    <None Include="part3TestCases\unitTests\10\test43.ampl" />
+    <None Include="part3TestCases\unitTests\10\test43.dict" />
+    <None Include="part3TestCases\unitTests\10\test43.output" />
+    <None Include="part3TestCases\unitTests\10\test44.ampl" />
+    <None Include="part3TestCases\unitTests\10\test44.dict" />
+    <None Include="part3TestCases\unitTests\10\test44.output" />
+    <None Include="part3TestCases\unitTests\10\test44.pdf" />
+    <None Include="part3TestCases\unitTests\10\test45.ampl" />
+    <None Include="part3TestCases\unitTests\10\test45.dict" />
+    <None Include="part3TestCases\unitTests\10\test45.output" />
+    <None Include="part3TestCases\unitTests\10\test46.ampl" />
+    <None Include="part3TestCases\unitTests\10\test46.dict" />
+    <None Include="part3TestCases\unitTests\10\test46.output" />
+    <None Include="part3TestCases\unitTests\10\test47.ampl" />
+    <None Include="part3TestCases\unitTests\10\test47.dict" />
+    <None Include="part3TestCases\unitTests\10\test47.output" />
+    <None Include="part3TestCases\unitTests\10\test48.ampl" />
+    <None Include="part3TestCases\unitTests\10\test48.dict" />
+    <None Include="part3TestCases\unitTests\10\test48.output" />
+    <None Include="part3TestCases\unitTests\10\test49.ampl" />
+    <None Include="part3TestCases\unitTests\10\test49.dict" />
+    <None Include="part3TestCases\unitTests\10\test49.output" />
+    <None Include="part3TestCases\unitTests\10\test5.ampl" />
+    <None Include="part3TestCases\unitTests\10\test5.dict" />
+    <None Include="part3TestCases\unitTests\10\test5.output" />
+    <None Include="part3TestCases\unitTests\10\test50.ampl" />
+    <None Include="part3TestCases\unitTests\10\test50.dict" />
+    <None Include="part3TestCases\unitTests\10\test50.output" />
+    <None Include="part3TestCases\unitTests\10\test51.ampl" />
+    <None Include="part3TestCases\unitTests\10\test51.dict" />
+    <None Include="part3TestCases\unitTests\10\test51.output" />
+    <None Include="part3TestCases\unitTests\10\test52.ampl" />
+    <None Include="part3TestCases\unitTests\10\test52.dict" />
+    <None Include="part3TestCases\unitTests\10\test52.output" />
+    <None Include="part3TestCases\unitTests\10\test53.ampl" />
+    <None Include="part3TestCases\unitTests\10\test53.dict" />
+    <None Include="part3TestCases\unitTests\10\test53.output" />
+    <None Include="part3TestCases\unitTests\10\test54.ampl" />
+    <None Include="part3TestCases\unitTests\10\test54.dict" />
+    <None Include="part3TestCases\unitTests\10\test54.output" />
+    <None Include="part3TestCases\unitTests\10\test55.ampl" />
+    <None Include="part3TestCases\unitTests\10\test55.dict" />
+    <None Include="part3TestCases\unitTests\10\test55.output" />
+    <None Include="part3TestCases\unitTests\10\test56.ampl" />
+    <None Include="part3TestCases\unitTests\10\test56.dict" />
+    <None Include="part3TestCases\unitTests\10\test56.output" />
+    <None Include="part3TestCases\unitTests\10\test57.ampl" />
+    <None Include="part3TestCases\unitTests\10\test57.dict" />
+    <None Include="part3TestCases\unitTests\10\test57.output" />
+    <None Include="part3TestCases\unitTests\10\test58.ampl" />
+    <None Include="part3TestCases\unitTests\10\test58.dict" />
+    <None Include="part3TestCases\unitTests\10\test58.output" />
+    <None Include="part3TestCases\unitTests\10\test58.pdf" />
+    <None Include="part3TestCases\unitTests\10\test59.ampl" />
+    <None Include="part3TestCases\unitTests\10\test59.dict" />
+    <None Include="part3TestCases\unitTests\10\test59.output" />
+    <None Include="part3TestCases\unitTests\10\test6.ampl" />
+    <None Include="part3TestCases\unitTests\10\test6.dict" />
+    <None Include="part3TestCases\unitTests\10\test6.output" />
+    <None Include="part3TestCases\unitTests\10\test60.ampl" />
+    <None Include="part3TestCases\unitTests\10\test60.dict" />
+    <None Include="part3TestCases\unitTests\10\test60.output" />
+    <None Include="part3TestCases\unitTests\10\test61.ampl" />
+    <None Include="part3TestCases\unitTests\10\test61.dict" />
+    <None Include="part3TestCases\unitTests\10\test61.output" />
+    <None Include="part3TestCases\unitTests\10\test62.ampl" />
+    <None Include="part3TestCases\unitTests\10\test62.dict" />
+    <None Include="part3TestCases\unitTests\10\test62.output" />
+    <None Include="part3TestCases\unitTests\10\test63.ampl" />
+    <None Include="part3TestCases\unitTests\10\test63.dict" />
+    <None Include="part3TestCases\unitTests\10\test63.output" />
+    <None Include="part3TestCases\unitTests\10\test64.ampl" />
+    <None Include="part3TestCases\unitTests\10\test64.dict" />
+    <None Include="part3TestCases\unitTests\10\test64.output" />
+    <None Include="part3TestCases\unitTests\10\test65.ampl" />
+    <None Include="part3TestCases\unitTests\10\test65.dict" />
+    <None Include="part3TestCases\unitTests\10\test65.output" />
+    <None Include="part3TestCases\unitTests\10\test66.ampl" />
+    <None Include="part3TestCases\unitTests\10\test66.dict" />
+    <None Include="part3TestCases\unitTests\10\test66.output" />
+    <None Include="part3TestCases\unitTests\10\test67.ampl" />
+    <None Include="part3TestCases\unitTests\10\test67.dict" />
+    <None Include="part3TestCases\unitTests\10\test67.output" />
+    <None Include="part3TestCases\unitTests\10\test68.ampl" />
+    <None Include="part3TestCases\unitTests\10\test68.dict" />
+    <None Include="part3TestCases\unitTests\10\test68.output" />
+    <None Include="part3TestCases\unitTests\10\test69.ampl" />
+    <None Include="part3TestCases\unitTests\10\test69.dict" />
+    <None Include="part3TestCases\unitTests\10\test69.output" />
+    <None Include="part3TestCases\unitTests\10\test7.ampl" />
+    <None Include="part3TestCases\unitTests\10\test7.dict" />
+    <None Include="part3TestCases\unitTests\10\test7.output" />
+    <None Include="part3TestCases\unitTests\10\test70.ampl" />
+    <None Include="part3TestCases\unitTests\10\test70.dict" />
+    <None Include="part3TestCases\unitTests\10\test70.output" />
+    <None Include="part3TestCases\unitTests\10\test71.ampl" />
+    <None Include="part3TestCases\unitTests\10\test71.dict" />
+    <None Include="part3TestCases\unitTests\10\test71.output" />
+    <None Include="part3TestCases\unitTests\10\test72.ampl" />
+    <None Include="part3TestCases\unitTests\10\test72.dict" />
+    <None Include="part3TestCases\unitTests\10\test72.output" />
+    <None Include="part3TestCases\unitTests\10\test73.ampl" />
+    <None Include="part3TestCases\unitTests\10\test73.dict" />
+    <None Include="part3TestCases\unitTests\10\test73.output" />
+    <None Include="part3TestCases\unitTests\10\test74.ampl" />
+    <None Include="part3TestCases\unitTests\10\test74.dict" />
+    <None Include="part3TestCases\unitTests\10\test74.output" />
+    <None Include="part3TestCases\unitTests\10\test75.ampl" />
+    <None Include="part3TestCases\unitTests\10\test75.dict" />
+    <None Include="part3TestCases\unitTests\10\test75.output" />
+    <None Include="part3TestCases\unitTests\10\test76.ampl" />
+    <None Include="part3TestCases\unitTests\10\test76.dict" />
+    <None Include="part3TestCases\unitTests\10\test76.output" />
+    <None Include="part3TestCases\unitTests\10\test77.ampl" />
+    <None Include="part3TestCases\unitTests\10\test77.dict" />
+    <None Include="part3TestCases\unitTests\10\test77.output" />
+    <None Include="part3TestCases\unitTests\10\test78.ampl" />
+    <None Include="part3TestCases\unitTests\10\test78.dict" />
+    <None Include="part3TestCases\unitTests\10\test78.output" />
+    <None Include="part3TestCases\unitTests\10\test79.ampl" />
+    <None Include="part3TestCases\unitTests\10\test79.dict" />
+    <None Include="part3TestCases\unitTests\10\test79.output" />
+    <None Include="part3TestCases\unitTests\10\test8.ampl" />
+    <None Include="part3TestCases\unitTests\10\test8.dict" />
+    <None Include="part3TestCases\unitTests\10\test8.output" />
+    <None Include="part3TestCases\unitTests\10\test80.ampl" />
+    <None Include="part3TestCases\unitTests\10\test80.dict" />
+    <None Include="part3TestCases\unitTests\10\test80.output" />
+    <None Include="part3TestCases\unitTests\10\test81.ampl" />
+    <None Include="part3TestCases\unitTests\10\test81.dict" />
+    <None Include="part3TestCases\unitTests\10\test81.output" />
+    <None Include="part3TestCases\unitTests\10\test82.ampl" />
+    <None Include="part3TestCases\unitTests\10\test82.dict" />
+    <None Include="part3TestCases\unitTests\10\test82.output" />
+    <None Include="part3TestCases\unitTests\10\test83.ampl" />
+    <None Include="part3TestCases\unitTests\10\test83.dict" />
+    <None Include="part3TestCases\unitTests\10\test83.output" />
+    <None Include="part3TestCases\unitTests\10\test84.ampl" />
+    <None Include="part3TestCases\unitTests\10\test84.dict" />
+    <None Include="part3TestCases\unitTests\10\test84.output" />
+    <None Include="part3TestCases\unitTests\10\test85.ampl" />
+    <None Include="part3TestCases\unitTests\10\test85.dict" />
+    <None Include="part3TestCases\unitTests\10\test85.output" />
+    <None Include="part3TestCases\unitTests\10\test86.ampl" />
+    <None Include="part3TestCases\unitTests\10\test86.dict" />
+    <None Include="part3TestCases\unitTests\10\test86.output" />
+    <None Include="part3TestCases\unitTests\10\test87.ampl" />
+    <None Include="part3TestCases\unitTests\10\test87.dict" />
+    <None Include="part3TestCases\unitTests\10\test87.output" />
+    <None Include="part3TestCases\unitTests\10\test88.ampl" />
+    <None Include="part3TestCases\unitTests\10\test88.dict" />
+    <None Include="part3TestCases\unitTests\10\test88.output" />
+    <None Include="part3TestCases\unitTests\10\test89.ampl" />
+    <None Include="part3TestCases\unitTests\10\test89.dict" />
+    <None Include="part3TestCases\unitTests\10\test89.output" />
+    <None Include="part3TestCases\unitTests\10\test9.ampl" />
+    <None Include="part3TestCases\unitTests\10\test9.dict" />
+    <None Include="part3TestCases\unitTests\10\test9.output" />
+    <None Include="part3TestCases\unitTests\10\test90.ampl" />
+    <None Include="part3TestCases\unitTests\10\test90.dict" />
+    <None Include="part3TestCases\unitTests\10\test90.output" />
+    <None Include="part3TestCases\unitTests\10\test91.ampl" />
+    <None Include="part3TestCases\unitTests\10\test91.dict" />
+    <None Include="part3TestCases\unitTests\10\test91.output" />
+    <None Include="part3TestCases\unitTests\10\test92.ampl" />
+    <None Include="part3TestCases\unitTests\10\test92.dict" />
+    <None Include="part3TestCases\unitTests\10\test92.output" />
+    <None Include="part3TestCases\unitTests\10\test93.ampl" />
+    <None Include="part3TestCases\unitTests\10\test93.dict" />
+    <None Include="part3TestCases\unitTests\10\test93.output" />
+    <None Include="part3TestCases\unitTests\10\test94.ampl" />
+    <None Include="part3TestCases\unitTests\10\test94.dict" />
+    <None Include="part3TestCases\unitTests\10\test94.output" />
+    <None Include="part3TestCases\unitTests\10\test95.ampl" />
+    <None Include="part3TestCases\unitTests\10\test95.dict" />
+    <None Include="part3TestCases\unitTests\10\test95.output" />
+    <None Include="part3TestCases\unitTests\10\test96.ampl" />
+    <None Include="part3TestCases\unitTests\10\test96.dict" />
+    <None Include="part3TestCases\unitTests\10\test96.output" />
+    <None Include="part3TestCases\unitTests\10\test97.ampl" />
+    <None Include="part3TestCases\unitTests\10\test97.dict" />
+    <None Include="part3TestCases\unitTests\10\test97.output" />
+    <None Include="part3TestCases\unitTests\10\test98.ampl" />
+    <None Include="part3TestCases\unitTests\10\test98.dict" />
+    <None Include="part3TestCases\unitTests\10\test98.output" />
+    <None Include="part3TestCases\unitTests\10\test99.ampl" />
+    <None Include="part3TestCases\unitTests\10\test99.dict" />
+    <None Include="part3TestCases\unitTests\10\test99.output" />
+    <None Include="part3TestCases\unitTests\10\toRun" />
+    <None Include="part3TestCases\unitTests\20\check.sh" />
+    <None Include="part3TestCases\unitTests\20\test.csv" />
+    <None Include="part3TestCases\unitTests\20\test0.ampl" />
+    <None Include="part3TestCases\unitTests\20\test0.dict" />
+    <None Include="part3TestCases\unitTests\20\test0.output" />
+    <None Include="part3TestCases\unitTests\20\test1.ampl" />
+    <None Include="part3TestCases\unitTests\20\test1.dict" />
+    <None Include="part3TestCases\unitTests\20\test1.output" />
+    <None Include="part3TestCases\unitTests\20\test10.ampl" />
+    <None Include="part3TestCases\unitTests\20\test10.dict" />
+    <None Include="part3TestCases\unitTests\20\test10.output" />
+    <None Include="part3TestCases\unitTests\20\test11.ampl" />
+    <None Include="part3TestCases\unitTests\20\test11.dict" />
+    <None Include="part3TestCases\unitTests\20\test11.output" />
+    <None Include="part3TestCases\unitTests\20\test12.ampl" />
+    <None Include="part3TestCases\unitTests\20\test12.dict" />
+    <None Include="part3TestCases\unitTests\20\test12.output" />
+    <None Include="part3TestCases\unitTests\20\test13.ampl" />
+    <None Include="part3TestCases\unitTests\20\test13.dict" />
+    <None Include="part3TestCases\unitTests\20\test13.output" />
+    <None Include="part3TestCases\unitTests\20\test14.ampl" />
+    <None Include="part3TestCases\unitTests\20\test14.dict" />
+    <None Include="part3TestCases\unitTests\20\test14.output" />
+    <None Include="part3TestCases\unitTests\20\test15.ampl" />
+    <None Include="part3TestCases\unitTests\20\test15.dict" />
+    <None Include="part3TestCases\unitTests\20\test15.output" />
+    <None Include="part3TestCases\unitTests\20\test16.ampl" />
+    <None Include="part3TestCases\unitTests\20\test16.dict" />
+    <None Include="part3TestCases\unitTests\20\test16.output" />
+    <None Include="part3TestCases\unitTests\20\test17.ampl" />
+    <None Include="part3TestCases\unitTests\20\test17.dict" />
+    <None Include="part3TestCases\unitTests\20\test17.output" />
+    <None Include="part3TestCases\unitTests\20\test18.ampl" />
+    <None Include="part3TestCases\unitTests\20\test18.dict" />
+    <None Include="part3TestCases\unitTests\20\test18.output" />
+    <None Include="part3TestCases\unitTests\20\test19.ampl" />
+    <None Include="part3TestCases\unitTests\20\test19.dict" />
+    <None Include="part3TestCases\unitTests\20\test19.output" />
+    <None Include="part3TestCases\unitTests\20\test2.ampl" />
+    <None Include="part3TestCases\unitTests\20\test2.dict" />
+    <None Include="part3TestCases\unitTests\20\test2.output" />
+    <None Include="part3TestCases\unitTests\20\test20.ampl" />
+    <None Include="part3TestCases\unitTests\20\test20.dict" />
+    <None Include="part3TestCases\unitTests\20\test20.output" />
+    <None Include="part3TestCases\unitTests\20\test21.ampl" />
+    <None Include="part3TestCases\unitTests\20\test21.dict" />
+    <None Include="part3TestCases\unitTests\20\test21.output" />
+    <None Include="part3TestCases\unitTests\20\test22.ampl" />
+    <None Include="part3TestCases\unitTests\20\test22.dict" />
+    <None Include="part3TestCases\unitTests\20\test22.output" />
+    <None Include="part3TestCases\unitTests\20\test23.ampl" />
+    <None Include="part3TestCases\unitTests\20\test23.dict" />
+    <None Include="part3TestCases\unitTests\20\test23.output" />
+    <None Include="part3TestCases\unitTests\20\test24.ampl" />
+    <None Include="part3TestCases\unitTests\20\test24.dict" />
+    <None Include="part3TestCases\unitTests\20\test24.output" />
+    <None Include="part3TestCases\unitTests\20\test25.ampl" />
+    <None Include="part3TestCases\unitTests\20\test25.dict" />
+    <None Include="part3TestCases\unitTests\20\test25.output" />
+    <None Include="part3TestCases\unitTests\20\test26.ampl" />
+    <None Include="part3TestCases\unitTests\20\test26.dict" />
+    <None Include="part3TestCases\unitTests\20\test26.output" />
+    <None Include="part3TestCases\unitTests\20\test27.ampl" />
+    <None Include="part3TestCases\unitTests\20\test27.dict" />
+    <None Include="part3TestCases\unitTests\20\test27.output" />
+    <None Include="part3TestCases\unitTests\20\test28.ampl" />
+    <None Include="part3TestCases\unitTests\20\test28.dict" />
+    <None Include="part3TestCases\unitTests\20\test28.output" />
+    <None Include="part3TestCases\unitTests\20\test29.ampl" />
+    <None Include="part3TestCases\unitTests\20\test29.dict" />
+    <None Include="part3TestCases\unitTests\20\test29.output" />
+    <None Include="part3TestCases\unitTests\20\test3.ampl" />
+    <None Include="part3TestCases\unitTests\20\test3.dict" />
+    <None Include="part3TestCases\unitTests\20\test3.output" />
+    <None Include="part3TestCases\unitTests\20\test30.ampl" />
+    <None Include="part3TestCases\unitTests\20\test30.dict" />
+    <None Include="part3TestCases\unitTests\20\test30.output" />
+    <None Include="part3TestCases\unitTests\20\test31.ampl" />
+    <None Include="part3TestCases\unitTests\20\test31.dict" />
+    <None Include="part3TestCases\unitTests\20\test31.output" />
+    <None Include="part3TestCases\unitTests\20\test32.ampl" />
+    <None Include="part3TestCases\unitTests\20\test32.dict" />
+    <None Include="part3TestCases\unitTests\20\test32.output" />
+    <None Include="part3TestCases\unitTests\20\test33.ampl" />
+    <None Include="part3TestCases\unitTests\20\test33.dict" />
+    <None Include="part3TestCases\unitTests\20\test33.output" />
+    <None Include="part3TestCases\unitTests\20\test34.ampl" />
+    <None Include="part3TestCases\unitTests\20\test34.dict" />
+    <None Include="part3TestCases\unitTests\20\test34.output" />
+    <None Include="part3TestCases\unitTests\20\test35.ampl" />
+    <None Include="part3TestCases\unitTests\20\test35.dict" />
+    <None Include="part3TestCases\unitTests\20\test35.output" />
+    <None Include="part3TestCases\unitTests\20\test36.ampl" />
+    <None Include="part3TestCases\unitTests\20\test36.dict" />
+    <None Include="part3TestCases\unitTests\20\test36.output" />
+    <None Include="part3TestCases\unitTests\20\test37.ampl" />
+    <None Include="part3TestCases\unitTests\20\test37.dict" />
+    <None Include="part3TestCases\unitTests\20\test37.output" />
+    <None Include="part3TestCases\unitTests\20\test38.ampl" />
+    <None Include="part3TestCases\unitTests\20\test38.dict" />
+    <None Include="part3TestCases\unitTests\20\test38.output" />
+    <None Include="part3TestCases\unitTests\20\test39.ampl" />
+    <None Include="part3TestCases\unitTests\20\test39.dict" />
+    <None Include="part3TestCases\unitTests\20\test39.output" />
+    <None Include="part3TestCases\unitTests\20\test4.ampl" />
+    <None Include="part3TestCases\unitTests\20\test4.dict" />
+    <None Include="part3TestCases\unitTests\20\test4.output" />
+    <None Include="part3TestCases\unitTests\20\test40.ampl" />
+    <None Include="part3TestCases\unitTests\20\test40.dict" />
+    <None Include="part3TestCases\unitTests\20\test40.output" />
+    <None Include="part3TestCases\unitTests\20\test41.ampl" />
+    <None Include="part3TestCases\unitTests\20\test41.dict" />
+    <None Include="part3TestCases\unitTests\20\test41.output" />
+    <None Include="part3TestCases\unitTests\20\test42.ampl" />
+    <None Include="part3TestCases\unitTests\20\test42.dict" />
+    <None Include="part3TestCases\unitTests\20\test42.output" />
+    <None Include="part3TestCases\unitTests\20\test43.ampl" />
+    <None Include="part3TestCases\unitTests\20\test43.dict" />
+    <None Include="part3TestCases\unitTests\20\test43.output" />
+    <None Include="part3TestCases\unitTests\20\test44.ampl" />
+    <None Include="part3TestCases\unitTests\20\test44.dict" />
+    <None Include="part3TestCases\unitTests\20\test44.output" />
+    <None Include="part3TestCases\unitTests\20\test45.ampl" />
+    <None Include="part3TestCases\unitTests\20\test45.dict" />
+    <None Include="part3TestCases\unitTests\20\test45.output" />
+    <None Include="part3TestCases\unitTests\20\test46.ampl" />
+    <None Include="part3TestCases\unitTests\20\test46.dict" />
+    <None Include="part3TestCases\unitTests\20\test46.output" />
+    <None Include="part3TestCases\unitTests\20\test47.ampl" />
+    <None Include="part3TestCases\unitTests\20\test47.dict" />
+    <None Include="part3TestCases\unitTests\20\test47.output" />
+    <None Include="part3TestCases\unitTests\20\test48.ampl" />
+    <None Include="part3TestCases\unitTests\20\test48.dict" />
+    <None Include="part3TestCases\unitTests\20\test48.output" />
+    <None Include="part3TestCases\unitTests\20\test49.ampl" />
+    <None Include="part3TestCases\unitTests\20\test49.dict" />
+    <None Include="part3TestCases\unitTests\20\test49.output" />
+    <None Include="part3TestCases\unitTests\20\test5.ampl" />
+    <None Include="part3TestCases\unitTests\20\test5.dict" />
+    <None Include="part3TestCases\unitTests\20\test5.output" />
+    <None Include="part3TestCases\unitTests\20\test50.ampl" />
+    <None Include="part3TestCases\unitTests\20\test50.dict" />
+    <None Include="part3TestCases\unitTests\20\test50.output" />
+    <None Include="part3TestCases\unitTests\20\test51.ampl" />
+    <None Include="part3TestCases\unitTests\20\test51.dict" />
+    <None Include="part3TestCases\unitTests\20\test51.output" />
+    <None Include="part3TestCases\unitTests\20\test51.pdf" />
+    <None Include="part3TestCases\unitTests\20\test52.ampl" />
+    <None Include="part3TestCases\unitTests\20\test52.dict" />
+    <None Include="part3TestCases\unitTests\20\test52.output" />
+    <None Include="part3TestCases\unitTests\20\test53.ampl" />
+    <None Include="part3TestCases\unitTests\20\test53.dict" />
+    <None Include="part3TestCases\unitTests\20\test53.output" />
+    <None Include="part3TestCases\unitTests\20\test54.ampl" />
+    <None Include="part3TestCases\unitTests\20\test54.dict" />
+    <None Include="part3TestCases\unitTests\20\test54.output" />
+    <None Include="part3TestCases\unitTests\20\test55.ampl" />
+    <None Include="part3TestCases\unitTests\20\test55.dict" />
+    <None Include="part3TestCases\unitTests\20\test55.output" />
+    <None Include="part3TestCases\unitTests\20\test56.ampl" />
+    <None Include="part3TestCases\unitTests\20\test56.dict" />
+    <None Include="part3TestCases\unitTests\20\test56.output" />
+    <None Include="part3TestCases\unitTests\20\test57.ampl" />
+    <None Include="part3TestCases\unitTests\20\test57.dict" />
+    <None Include="part3TestCases\unitTests\20\test57.output" />
+    <None Include="part3TestCases\unitTests\20\test58.ampl" />
+    <None Include="part3TestCases\unitTests\20\test58.dict" />
+    <None Include="part3TestCases\unitTests\20\test58.output" />
+    <None Include="part3TestCases\unitTests\20\test59.ampl" />
+    <None Include="part3TestCases\unitTests\20\test59.dict" />
+    <None Include="part3TestCases\unitTests\20\test59.output" />
+    <None Include="part3TestCases\unitTests\20\test6.ampl" />
+    <None Include="part3TestCases\unitTests\20\test6.dict" />
+    <None Include="part3TestCases\unitTests\20\test6.output" />
+    <None Include="part3TestCases\unitTests\20\test60.ampl" />
+    <None Include="part3TestCases\unitTests\20\test60.dict" />
+    <None Include="part3TestCases\unitTests\20\test60.output" />
+    <None Include="part3TestCases\unitTests\20\test61.ampl" />
+    <None Include="part3TestCases\unitTests\20\test61.dict" />
+    <None Include="part3TestCases\unitTests\20\test61.output" />
+    <None Include="part3TestCases\unitTests\20\test62.ampl" />
+    <None Include="part3TestCases\unitTests\20\test62.dict" />
+    <None Include="part3TestCases\unitTests\20\test62.output" />
+    <None Include="part3TestCases\unitTests\20\test63.ampl" />
+    <None Include="part3TestCases\unitTests\20\test63.dict" />
+    <None Include="part3TestCases\unitTests\20\test63.output" />
+    <None Include="part3TestCases\unitTests\20\test64.ampl" />
+    <None Include="part3TestCases\unitTests\20\test64.dict" />
+    <None Include="part3TestCases\unitTests\20\test64.output" />
+    <None Include="part3TestCases\unitTests\20\test65.ampl" />
+    <None Include="part3TestCases\unitTests\20\test65.dict" />
+    <None Include="part3TestCases\unitTests\20\test65.output" />
+    <None Include="part3TestCases\unitTests\20\test66.ampl" />
+    <None Include="part3TestCases\unitTests\20\test66.dict" />
+    <None Include="part3TestCases\unitTests\20\test66.output" />
+    <None Include="part3TestCases\unitTests\20\test67.ampl" />
+    <None Include="part3TestCases\unitTests\20\test67.dict" />
+    <None Include="part3TestCases\unitTests\20\test67.output" />
+    <None Include="part3TestCases\unitTests\20\test68.ampl" />
+    <None Include="part3TestCases\unitTests\20\test68.dict" />
+    <None Include="part3TestCases\unitTests\20\test68.output" />
+    <None Include="part3TestCases\unitTests\20\test69.ampl" />
+    <None Include="part3TestCases\unitTests\20\test69.dict" />
+    <None Include="part3TestCases\unitTests\20\test69.output" />
+    <None Include="part3TestCases\unitTests\20\test7.ampl" />
+    <None Include="part3TestCases\unitTests\20\test7.dict" />
+    <None Include="part3TestCases\unitTests\20\test7.output" />
+    <None Include="part3TestCases\unitTests\20\test70.ampl" />
+    <None Include="part3TestCases\unitTests\20\test70.dict" />
+    <None Include="part3TestCases\unitTests\20\test70.output" />
+    <None Include="part3TestCases\unitTests\20\test71.ampl" />
+    <None Include="part3TestCases\unitTests\20\test71.dict" />
+    <None Include="part3TestCases\unitTests\20\test71.output" />
+    <None Include="part3TestCases\unitTests\20\test72.ampl" />
+    <None Include="part3TestCases\unitTests\20\test72.dict" />
+    <None Include="part3TestCases\unitTests\20\test72.output" />
+    <None Include="part3TestCases\unitTests\20\test73.ampl" />
+    <None Include="part3TestCases\unitTests\20\test73.dict" />
+    <None Include="part3TestCases\unitTests\20\test73.output" />
+    <None Include="part3TestCases\unitTests\20\test74.ampl" />
+    <None Include="part3TestCases\unitTests\20\test74.dict" />
+    <None Include="part3TestCases\unitTests\20\test74.output" />
+    <None Include="part3TestCases\unitTests\20\test75.ampl" />
+    <None Include="part3TestCases\unitTests\20\test75.dict" />
+    <None Include="part3TestCases\unitTests\20\test75.output" />
+    <None Include="part3TestCases\unitTests\20\test76.ampl" />
+    <None Include="part3TestCases\unitTests\20\test76.dict" />
+    <None Include="part3TestCases\unitTests\20\test76.output" />
+    <None Include="part3TestCases\unitTests\20\test77.ampl" />
+    <None Include="part3TestCases\unitTests\20\test77.dict" />
+    <None Include="part3TestCases\unitTests\20\test77.output" />
+    <None Include="part3TestCases\unitTests\20\test78.ampl" />
+    <None Include="part3TestCases\unitTests\20\test78.dict" />
+    <None Include="part3TestCases\unitTests\20\test78.output" />
+    <None Include="part3TestCases\unitTests\20\test79.ampl" />
+    <None Include="part3TestCases\unitTests\20\test79.dict" />
+    <None Include="part3TestCases\unitTests\20\test79.output" />
+    <None Include="part3TestCases\unitTests\20\test8.ampl" />
+    <None Include="part3TestCases\unitTests\20\test8.dict" />
+    <None Include="part3TestCases\unitTests\20\test8.output" />
+    <None Include="part3TestCases\unitTests\20\test80.ampl" />
+    <None Include="part3TestCases\unitTests\20\test80.dict" />
+    <None Include="part3TestCases\unitTests\20\test80.output" />
+    <None Include="part3TestCases\unitTests\20\test81.ampl" />
+    <None Include="part3TestCases\unitTests\20\test81.dict" />
+    <None Include="part3TestCases\unitTests\20\test81.output" />
+    <None Include="part3TestCases\unitTests\20\test82.ampl" />
+    <None Include="part3TestCases\unitTests\20\test82.dict" />
+    <None Include="part3TestCases\unitTests\20\test82.output" />
+    <None Include="part3TestCases\unitTests\20\test83.ampl" />
+    <None Include="part3TestCases\unitTests\20\test83.dict" />
+    <None Include="part3TestCases\unitTests\20\test83.output" />
+    <None Include="part3TestCases\unitTests\20\test84.ampl" />
+    <None Include="part3TestCases\unitTests\20\test84.dict" />
+    <None Include="part3TestCases\unitTests\20\test84.output" />
+    <None Include="part3TestCases\unitTests\20\test85.ampl" />
+    <None Include="part3TestCases\unitTests\20\test85.dict" />
+    <None Include="part3TestCases\unitTests\20\test85.output" />
+    <None Include="part3TestCases\unitTests\20\test86.ampl" />
+    <None Include="part3TestCases\unitTests\20\test86.dict" />
+    <None Include="part3TestCases\unitTests\20\test86.output" />
+    <None Include="part3TestCases\unitTests\20\test87.ampl" />
+    <None Include="part3TestCases\unitTests\20\test87.dict" />
+    <None Include="part3TestCases\unitTests\20\test87.output" />
+    <None Include="part3TestCases\unitTests\20\test88.ampl" />
+    <None Include="part3TestCases\unitTests\20\test88.dict" />
+    <None Include="part3TestCases\unitTests\20\test88.output" />
+    <None Include="part3TestCases\unitTests\20\test89.ampl" />
+    <None Include="part3TestCases\unitTests\20\test89.dict" />
+    <None Include="part3TestCases\unitTests\20\test89.output" />
+    <None Include="part3TestCases\unitTests\20\test9.ampl" />
+    <None Include="part3TestCases\unitTests\20\test9.dict" />
+    <None Include="part3TestCases\unitTests\20\test9.output" />
+    <None Include="part3TestCases\unitTests\20\test90.ampl" />
+    <None Include="part3TestCases\unitTests\20\test90.dict" />
+    <None Include="part3TestCases\unitTests\20\test90.output" />
+    <None Include="part3TestCases\unitTests\20\test91.ampl" />
+    <None Include="part3TestCases\unitTests\20\test91.dict" />
+    <None Include="part3TestCases\unitTests\20\test91.output" />
+    <None Include="part3TestCases\unitTests\20\test92.ampl" />
+    <None Include="part3TestCases\unitTests\20\test92.dict" />
+    <None Include="part3TestCases\unitTests\20\test92.output" />
+    <None Include="part3TestCases\unitTests\20\test93.ampl" />
+    <None Include="part3TestCases\unitTests\20\test93.dict" />
+    <None Include="part3TestCases\unitTests\20\test93.output" />
+    <None Include="part3TestCases\unitTests\20\test94.ampl" />
+    <None Include="part3TestCases\unitTests\20\test94.dict" />
+    <None Include="part3TestCases\unitTests\20\test94.output" />
+    <None Include="part3TestCases\unitTests\20\test95.ampl" />
+    <None Include="part3TestCases\unitTests\20\test95.dict" />
+    <None Include="part3TestCases\unitTests\20\test95.output" />
+    <None Include="part3TestCases\unitTests\20\test96.ampl" />
+    <None Include="part3TestCases\unitTests\20\test96.dict" />
+    <None Include="part3TestCases\unitTests\20\test96.output" />
+    <None Include="part3TestCases\unitTests\20\test97.ampl" />
+    <None Include="part3TestCases\unitTests\20\test97.dict" />
+    <None Include="part3TestCases\unitTests\20\test97.output" />
+    <None Include="part3TestCases\unitTests\20\test98.ampl" />
+    <None Include="part3TestCases\unitTests\20\test98.dict" />
+    <None Include="part3TestCases\unitTests\20\test98.output" />
+    <None Include="part3TestCases\unitTests\20\test99.ampl" />
+    <None Include="part3TestCases\unitTests\20\test99.dict" />
+    <None Include="part3TestCases\unitTests\20\test99.output" />
+    <None Include="part3TestCases\unitTests\20\toRun" />
+    <None Include="part3TestCases\unitTests\50\check.sh" />
+    <None Include="part3TestCases\unitTests\50\test.csv" />
+    <None Include="part3TestCases\unitTests\50\test0.ampl" />
+    <None Include="part3TestCases\unitTests\50\test0.dict" />
+    <None Include="part3TestCases\unitTests\50\test0.output" />
+    <None Include="part3TestCases\unitTests\50\test1.ampl" />
+    <None Include="part3TestCases\unitTests\50\test1.dict" />
+    <None Include="part3TestCases\unitTests\50\test1.output" />
+    <None Include="part3TestCases\unitTests\50\test10.ampl" />
+    <None Include="part3TestCases\unitTests\50\test10.dict" />
+    <None Include="part3TestCases\unitTests\50\test10.output" />
+    <None Include="part3TestCases\unitTests\50\test11.ampl" />
+    <None Include="part3TestCases\unitTests\50\test11.dict" />
+    <None Include="part3TestCases\unitTests\50\test11.output" />
+    <None Include="part3TestCases\unitTests\50\test12.ampl" />
+    <None Include="part3TestCases\unitTests\50\test12.dict" />
+    <None Include="part3TestCases\unitTests\50\test12.output" />
+    <None Include="part3TestCases\unitTests\50\test13.ampl" />
+    <None Include="part3TestCases\unitTests\50\test13.dict" />
+    <None Include="part3TestCases\unitTests\50\test13.output" />
+    <None Include="part3TestCases\unitTests\50\test14.ampl" />
+    <None Include="part3TestCases\unitTests\50\test14.dict" />
+    <None Include="part3TestCases\unitTests\50\test14.output" />
+    <None Include="part3TestCases\unitTests\50\test15.ampl" />
+    <None Include="part3TestCases\unitTests\50\test15.dict" />
+    <None Include="part3TestCases\unitTests\50\test15.output" />
+    <None Include="part3TestCases\unitTests\50\test16.ampl" />
+    <None Include="part3TestCases\unitTests\50\test16.dict" />
+    <None Include="part3TestCases\unitTests\50\test16.output" />
+    <None Include="part3TestCases\unitTests\50\test17.ampl" />
+    <None Include="part3TestCases\unitTests\50\test17.dict" />
+    <None Include="part3TestCases\unitTests\50\test17.output" />
+    <None Include="part3TestCases\unitTests\50\test18.ampl" />
+    <None Include="part3TestCases\unitTests\50\test18.dict" />
+    <None Include="part3TestCases\unitTests\50\test18.output" />
+    <None Include="part3TestCases\unitTests\50\test19.ampl" />
+    <None Include="part3TestCases\unitTests\50\test19.dict" />
+    <None Include="part3TestCases\unitTests\50\test19.output" />
+    <None Include="part3TestCases\unitTests\50\test2.ampl" />
+    <None Include="part3TestCases\unitTests\50\test2.dict" />
+    <None Include="part3TestCases\unitTests\50\test2.output" />
+    <None Include="part3TestCases\unitTests\50\test20.ampl" />
+    <None Include="part3TestCases\unitTests\50\test20.dict" />
+    <None Include="part3TestCases\unitTests\50\test20.output" />
+    <None Include="part3TestCases\unitTests\50\test21.ampl" />
+    <None Include="part3TestCases\unitTests\50\test21.dict" />
+    <None Include="part3TestCases\unitTests\50\test21.output" />
+    <None Include="part3TestCases\unitTests\50\test22.ampl" />
+    <None Include="part3TestCases\unitTests\50\test22.dict" />
+    <None Include="part3TestCases\unitTests\50\test22.output" />
+    <None Include="part3TestCases\unitTests\50\test23.ampl" />
+    <None Include="part3TestCases\unitTests\50\test23.dict" />
+    <None Include="part3TestCases\unitTests\50\test23.output" />
+    <None Include="part3TestCases\unitTests\50\test24.ampl" />
+    <None Include="part3TestCases\unitTests\50\test24.dict" />
+    <None Include="part3TestCases\unitTests\50\test24.output" />
+    <None Include="part3TestCases\unitTests\50\test25.ampl" />
+    <None Include="part3TestCases\unitTests\50\test25.dict" />
+    <None Include="part3TestCases\unitTests\50\test25.output" />
+    <None Include="part3TestCases\unitTests\50\test26.ampl" />
+    <None Include="part3TestCases\unitTests\50\test26.dict" />
+    <None Include="part3TestCases\unitTests\50\test26.output" />
+    <None Include="part3TestCases\unitTests\50\test27.ampl" />
+    <None Include="part3TestCases\unitTests\50\test27.dict" />
+    <None Include="part3TestCases\unitTests\50\test27.output" />
+    <None Include="part3TestCases\unitTests\50\test28.ampl" />
+    <None Include="part3TestCases\unitTests\50\test28.dict" />
+    <None Include="part3TestCases\unitTests\50\test28.output" />
+    <None Include="part3TestCases\unitTests\50\test29.ampl" />
+    <None Include="part3TestCases\unitTests\50\test29.dict" />
+    <None Include="part3TestCases\unitTests\50\test29.output" />
+    <None Include="part3TestCases\unitTests\50\test3.ampl" />
+    <None Include="part3TestCases\unitTests\50\test3.dict" />
+    <None Include="part3TestCases\unitTests\50\test3.output" />
+    <None Include="part3TestCases\unitTests\50\test30.ampl" />
+    <None Include="part3TestCases\unitTests\50\test30.dict" />
+    <None Include="part3TestCases\unitTests\50\test30.output" />
+    <None Include="part3TestCases\unitTests\50\test31.ampl" />
+    <None Include="part3TestCases\unitTests\50\test31.dict" />
+    <None Include="part3TestCases\unitTests\50\test31.output" />
+    <None Include="part3TestCases\unitTests\50\test32.ampl" />
+    <None Include="part3TestCases\unitTests\50\test32.dict" />
+    <None Include="part3TestCases\unitTests\50\test32.output" />
+    <None Include="part3TestCases\unitTests\50\test33.ampl" />
+    <None Include="part3TestCases\unitTests\50\test33.dict" />
+    <None Include="part3TestCases\unitTests\50\test33.output" />
+    <None Include="part3TestCases\unitTests\50\test34.ampl" />
+    <None Include="part3TestCases\unitTests\50\test34.dict" />
+    <None Include="part3TestCases\unitTests\50\test34.output" />
+    <None Include="part3TestCases\unitTests\50\test35.ampl" />
+    <None Include="part3TestCases\unitTests\50\test35.dict" />
+    <None Include="part3TestCases\unitTests\50\test35.output" />
+    <None Include="part3TestCases\unitTests\50\test36.ampl" />
+    <None Include="part3TestCases\unitTests\50\test36.dict" />
+    <None Include="part3TestCases\unitTests\50\test36.output" />
+    <None Include="part3TestCases\unitTests\50\test37.ampl" />
+    <None Include="part3TestCases\unitTests\50\test37.dict" />
+    <None Include="part3TestCases\unitTests\50\test37.output" />
+    <None Include="part3TestCases\unitTests\50\test38.ampl" />
+    <None Include="part3TestCases\unitTests\50\test38.dict" />
+    <None Include="part3TestCases\unitTests\50\test38.output" />
+    <None Include="part3TestCases\unitTests\50\test39.ampl" />
+    <None Include="part3TestCases\unitTests\50\test39.dict" />
+    <None Include="part3TestCases\unitTests\50\test39.output" />
+    <None Include="part3TestCases\unitTests\50\test4.ampl" />
+    <None Include="part3TestCases\unitTests\50\test4.dict" />
+    <None Include="part3TestCases\unitTests\50\test4.output" />
+    <None Include="part3TestCases\unitTests\50\test40.ampl" />
+    <None Include="part3TestCases\unitTests\50\test40.dict" />
+    <None Include="part3TestCases\unitTests\50\test40.output" />
+    <None Include="part3TestCases\unitTests\50\test41.ampl" />
+    <None Include="part3TestCases\unitTests\50\test41.dict" />
+    <None Include="part3TestCases\unitTests\50\test41.output" />
+    <None Include="part3TestCases\unitTests\50\test42.ampl" />
+    <None Include="part3TestCases\unitTests\50\test42.dict" />
+    <None Include="part3TestCases\unitTests\50\test42.output" />
+    <None Include="part3TestCases\unitTests\50\test43.ampl" />
+    <None Include="part3TestCases\unitTests\50\test43.dict" />
+    <None Include="part3TestCases\unitTests\50\test43.output" />
+    <None Include="part3TestCases\unitTests\50\test44.ampl" />
+    <None Include="part3TestCases\unitTests\50\test44.dict" />
+    <None Include="part3TestCases\unitTests\50\test44.output" />
+    <None Include="part3TestCases\unitTests\50\test45.ampl" />
+    <None Include="part3TestCases\unitTests\50\test45.dict" />
+    <None Include="part3TestCases\unitTests\50\test45.output" />
+    <None Include="part3TestCases\unitTests\50\test46.ampl" />
+    <None Include="part3TestCases\unitTests\50\test46.dict" />
+    <None Include="part3TestCases\unitTests\50\test46.output" />
+    <None Include="part3TestCases\unitTests\50\test47.ampl" />
+    <None Include="part3TestCases\unitTests\50\test47.dict" />
+    <None Include="part3TestCases\unitTests\50\test47.output" />
+    <None Include="part3TestCases\unitTests\50\test48.ampl" />
+    <None Include="part3TestCases\unitTests\50\test48.dict" />
+    <None Include="part3TestCases\unitTests\50\test48.output" />
+    <None Include="part3TestCases\unitTests\50\test49.ampl" />
+    <None Include="part3TestCases\unitTests\50\test49.dict" />
+    <None Include="part3TestCases\unitTests\50\test49.output" />
+    <None Include="part3TestCases\unitTests\50\test5.ampl" />
+    <None Include="part3TestCases\unitTests\50\test5.dict" />
+    <None Include="part3TestCases\unitTests\50\test5.output" />
+    <None Include="part3TestCases\unitTests\50\test50.ampl" />
+    <None Include="part3TestCases\unitTests\50\test50.dict" />
+    <None Include="part3TestCases\unitTests\50\test50.output" />
+    <None Include="part3TestCases\unitTests\50\test51.ampl" />
+    <None Include="part3TestCases\unitTests\50\test51.dict" />
+    <None Include="part3TestCases\unitTests\50\test51.output" />
+    <None Include="part3TestCases\unitTests\50\test52.ampl" />
+    <None Include="part3TestCases\unitTests\50\test52.dict" />
+    <None Include="part3TestCases\unitTests\50\test52.output" />
+    <None Include="part3TestCases\unitTests\50\test53.ampl" />
+    <None Include="part3TestCases\unitTests\50\test53.dict" />
+    <None Include="part3TestCases\unitTests\50\test53.output" />
+    <None Include="part3TestCases\unitTests\50\test54.ampl" />
+    <None Include="part3TestCases\unitTests\50\test54.dict" />
+    <None Include="part3TestCases\unitTests\50\test54.output" />
+    <None Include="part3TestCases\unitTests\50\test55.ampl" />
+    <None Include="part3TestCases\unitTests\50\test55.dict" />
+    <None Include="part3TestCases\unitTests\50\test55.output" />
+    <None Include="part3TestCases\unitTests\50\test56.ampl" />
+    <None Include="part3TestCases\unitTests\50\test56.dict" />
+    <None Include="part3TestCases\unitTests\50\test56.output" />
+    <None Include="part3TestCases\unitTests\50\test57.ampl" />
+    <None Include="part3TestCases\unitTests\50\test57.dict" />
+    <None Include="part3TestCases\unitTests\50\test57.output" />
+    <None Include="part3TestCases\unitTests\50\test58.ampl" />
+    <None Include="part3TestCases\unitTests\50\test58.dict" />
+    <None Include="part3TestCases\unitTests\50\test58.output" />
+    <None Include="part3TestCases\unitTests\50\test59.ampl" />
+    <None Include="part3TestCases\unitTests\50\test59.dict" />
+    <None Include="part3TestCases\unitTests\50\test59.output" />
+    <None Include="part3TestCases\unitTests\50\test6.ampl" />
+    <None Include="part3TestCases\unitTests\50\test6.dict" />
+    <None Include="part3TestCases\unitTests\50\test6.output" />
+    <None Include="part3TestCases\unitTests\50\test60.ampl" />
+    <None Include="part3TestCases\unitTests\50\test60.dict" />
+    <None Include="part3TestCases\unitTests\50\test60.output" />
+    <None Include="part3TestCases\unitTests\50\test61.ampl" />
+    <None Include="part3TestCases\unitTests\50\test61.dict" />
+    <None Include="part3TestCases\unitTests\50\test61.output" />
+    <None Include="part3TestCases\unitTests\50\test62.ampl" />
+    <None Include="part3TestCases\unitTests\50\test62.dict" />
+    <None Include="part3TestCases\unitTests\50\test62.output" />
+    <None Include="part3TestCases\unitTests\50\test63.ampl" />
+    <None Include="part3TestCases\unitTests\50\test63.dict" />
+    <None Include="part3TestCases\unitTests\50\test63.output" />
+    <None Include="part3TestCases\unitTests\50\test64.ampl" />
+    <None Include="part3TestCases\unitTests\50\test64.dict" />
+    <None Include="part3TestCases\unitTests\50\test64.output" />
+    <None Include="part3TestCases\unitTests\50\test65.ampl" />
+    <None Include="part3TestCases\unitTests\50\test65.dict" />
+    <None Include="part3TestCases\unitTests\50\test65.output" />
+    <None Include="part3TestCases\unitTests\50\test66.ampl" />
+    <None Include="part3TestCases\unitTests\50\test66.dict" />
+    <None Include="part3TestCases\unitTests\50\test66.output" />
+    <None Include="part3TestCases\unitTests\50\test67.ampl" />
+    <None Include="part3TestCases\unitTests\50\test67.dict" />
+    <None Include="part3TestCases\unitTests\50\test67.output" />
+    <None Include="part3TestCases\unitTests\50\test68.ampl" />
+    <None Include="part3TestCases\unitTests\50\test68.dict" />
+    <None Include="part3TestCases\unitTests\50\test68.output" />
+    <None Include="part3TestCases\unitTests\50\test69.ampl" />
+    <None Include="part3TestCases\unitTests\50\test69.dict" />
+    <None Include="part3TestCases\unitTests\50\test69.output" />
+    <None Include="part3TestCases\unitTests\50\test7.ampl" />
+    <None Include="part3TestCases\unitTests\50\test7.dict" />
+    <None Include="part3TestCases\unitTests\50\test7.output" />
+    <None Include="part3TestCases\unitTests\50\test70.ampl" />
+    <None Include="part3TestCases\unitTests\50\test70.dict" />
+    <None Include="part3TestCases\unitTests\50\test70.output" />
+    <None Include="part3TestCases\unitTests\50\test71.ampl" />
+    <None Include="part3TestCases\unitTests\50\test71.dict" />
+    <None Include="part3TestCases\unitTests\50\test71.output" />
+    <None Include="part3TestCases\unitTests\50\test72.ampl" />
+    <None Include="part3TestCases\unitTests\50\test72.dict" />
+    <None Include="part3TestCases\unitTests\50\test72.output" />
+    <None Include="part3TestCases\unitTests\50\test73.ampl" />
+    <None Include="part3TestCases\unitTests\50\test73.dict" />
+    <None Include="part3TestCases\unitTests\50\test73.output" />
+    <None Include="part3TestCases\unitTests\50\test74.ampl" />
+    <None Include="part3TestCases\unitTests\50\test74.dict" />
+    <None Include="part3TestCases\unitTests\50\test74.output" />
+    <None Include="part3TestCases\unitTests\50\test75.ampl" />
+    <None Include="part3TestCases\unitTests\50\test75.dict" />
+    <None Include="part3TestCases\unitTests\50\test75.output" />
+    <None Include="part3TestCases\unitTests\50\test76.ampl" />
+    <None Include="part3TestCases\unitTests\50\test76.dict" />
+    <None Include="part3TestCases\unitTests\50\test76.output" />
+    <None Include="part3TestCases\unitTests\50\test77.ampl" />
+    <None Include="part3TestCases\unitTests\50\test77.dict" />
+    <None Include="part3TestCases\unitTests\50\test77.output" />
+    <None Include="part3TestCases\unitTests\50\test78.ampl" />
+    <None Include="part3TestCases\unitTests\50\test78.dict" />
+    <None Include="part3TestCases\unitTests\50\test78.output" />
+    <None Include="part3TestCases\unitTests\50\test79.ampl" />
+    <None Include="part3TestCases\unitTests\50\test79.dict" />
+    <None Include="part3TestCases\unitTests\50\test79.output" />
+    <None Include="part3TestCases\unitTests\50\test8.ampl" />
+    <None Include="part3TestCases\unitTests\50\test8.dict" />
+    <None Include="part3TestCases\unitTests\50\test8.output" />
+    <None Include="part3TestCases\unitTests\50\test80.ampl" />
+    <None Include="part3TestCases\unitTests\50\test80.dict" />
+    <None Include="part3TestCases\unitTests\50\test80.output" />
+    <None Include="part3TestCases\unitTests\50\test81.ampl" />
+    <None Include="part3TestCases\unitTests\50\test81.dict" />
+    <None Include="part3TestCases\unitTests\50\test81.output" />
+    <None Include="part3TestCases\unitTests\50\test82.ampl" />
+    <None Include="part3TestCases\unitTests\50\test82.dict" />
+    <None Include="part3TestCases\unitTests\50\test82.output" />
+    <None Include="part3TestCases\unitTests\50\test83.ampl" />
+    <None Include="part3TestCases\unitTests\50\test83.dict" />
+    <None Include="part3TestCases\unitTests\50\test83.output" />
+    <None Include="part3TestCases\unitTests\50\test84.ampl" />
+    <None Include="part3TestCases\unitTests\50\test84.dict" />
+    <None Include="part3TestCases\unitTests\50\test84.output" />
+    <None Include="part3TestCases\unitTests\50\test85.ampl" />
+    <None Include="part3TestCases\unitTests\50\test85.dict" />
+    <None Include="part3TestCases\unitTests\50\test85.output" />
+    <None Include="part3TestCases\unitTests\50\test86.ampl" />
+    <None Include="part3TestCases\unitTests\50\test86.dict" />
+    <None Include="part3TestCases\unitTests\50\test86.output" />
+    <None Include="part3TestCases\unitTests\50\test87.ampl" />
+    <None Include="part3TestCases\unitTests\50\test87.dict" />
+    <None Include="part3TestCases\unitTests\50\test87.output" />
+    <None Include="part3TestCases\unitTests\50\test88.ampl" />
+    <None Include="part3TestCases\unitTests\50\test88.dict" />
+    <None Include="part3TestCases\unitTests\50\test88.output" />
+    <None Include="part3TestCases\unitTests\50\test89.ampl" />
+    <None Include="part3TestCases\unitTests\50\test89.dict" />
+    <None Include="part3TestCases\unitTests\50\test89.output" />
+    <None Include="part3TestCases\unitTests\50\test9.ampl" />
+    <None Include="part3TestCases\unitTests\50\test9.dict" />
+    <None Include="part3TestCases\unitTests\50\test9.output" />
+    <None Include="part3TestCases\unitTests\50\test90.ampl" />
+    <None Include="part3TestCases\unitTests\50\test90.dict" />
+    <None Include="part3TestCases\unitTests\50\test90.output" />
+    <None Include="part3TestCases\unitTests\50\test91.ampl" />
+    <None Include="part3TestCases\unitTests\50\test91.dict" />
+    <None Include="part3TestCases\unitTests\50\test91.output" />
+    <None Include="part3TestCases\unitTests\50\test92.ampl" />
+    <None Include="part3TestCases\unitTests\50\test92.dict" />
+    <None Include="part3TestCases\unitTests\50\test92.output" />
+    <None Include="part3TestCases\unitTests\50\test93.ampl" />
+    <None Include="part3TestCases\unitTests\50\test93.dict" />
+    <None Include="part3TestCases\unitTests\50\test93.output" />
+    <None Include="part3TestCases\unitTests\50\test94.ampl" />
+    <None Include="part3TestCases\unitTests\50\test94.dict" />
+    <None Include="part3TestCases\unitTests\50\test94.output" />
+    <None Include="part3TestCases\unitTests\50\test95.ampl" />
+    <None Include="part3TestCases\unitTests\50\test95.dict" />
+    <None Include="part3TestCases\unitTests\50\test95.output" />
+    <None Include="part3TestCases\unitTests\50\test96.ampl" />
+    <None Include="part3TestCases\unitTests\50\test96.dict" />
+    <None Include="part3TestCases\unitTests\50\test96.output" />
+    <None Include="part3TestCases\unitTests\50\test97.ampl" />
+    <None Include="part3TestCases\unitTests\50\test97.dict" />
+    <None Include="part3TestCases\unitTests\50\test97.output" />
+    <None Include="part3TestCases\unitTests\50\test98.ampl" />
+    <None Include="part3TestCases\unitTests\50\test98.dict" />
+    <None Include="part3TestCases\unitTests\50\test98.output" />
+    <None Include="part3TestCases\unitTests\50\test99.ampl" />
+    <None Include="part3TestCases\unitTests\50\test99.dict" />
+    <None Include="part3TestCases\unitTests\50\test99.output" />
+    <None Include="part3TestCases\unitTests\50\toRun" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MyLinearProgramSolver\MyLinearProgramSolver.csproj">
+      <Project>{daaf7aaa-6662-4d16-957b-2ded69cb125d}</Project>
+      <Name>MyLinearProgramSolver</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="part1TestCases\unitTests\printPivots.tex" />
+    <Content Include="part2TestCases\unitTests\printOut.tex" />
+    <Content Include="part3TestCases\unitTests\10\preamble.tex" />
+    <Content Include="part3TestCases\unitTests\10\test0.tex" />
+    <Content Include="part3TestCases\unitTests\10\test1.tex" />
+    <Content Include="part3TestCases\unitTests\10\test10.tex" />
+    <Content Include="part3TestCases\unitTests\10\test11.tex" />
+    <Content Include="part3TestCases\unitTests\10\test12.tex" />
+    <Content Include="part3TestCases\unitTests\10\test13.tex" />
+    <Content Include="part3TestCases\unitTests\10\test14.tex" />
+    <Content Include="part3TestCases\unitTests\10\test15.tex" />
+    <Content Include="part3TestCases\unitTests\10\test16.tex" />
+    <Content Include="part3TestCases\unitTests\10\test17.tex" />
+    <Content Include="part3TestCases\unitTests\10\test18.tex" />
+    <Content Include="part3TestCases\unitTests\10\test19.tex" />
+    <Content Include="part3TestCases\unitTests\10\test2.tex" />
+    <Content Include="part3TestCases\unitTests\10\test20.tex" />
+    <Content Include="part3TestCases\unitTests\10\test21.tex" />
+    <Content Include="part3TestCases\unitTests\10\test22.tex" />
+    <Content Include="part3TestCases\unitTests\10\test23.tex" />
+    <Content Include="part3TestCases\unitTests\10\test24.tex" />
+    <Content Include="part3TestCases\unitTests\10\test25.tex" />
+    <Content Include="part3TestCases\unitTests\10\test26.tex" />
+    <Content Include="part3TestCases\unitTests\10\test27.tex" />
+    <Content Include="part3TestCases\unitTests\10\test28.tex" />
+    <Content Include="part3TestCases\unitTests\10\test29.tex" />
+    <Content Include="part3TestCases\unitTests\10\test3.tex" />
+    <Content Include="part3TestCases\unitTests\10\test30.tex" />
+    <Content Include="part3TestCases\unitTests\10\test31.tex" />
+    <Content Include="part3TestCases\unitTests\10\test32.tex" />
+    <Content Include="part3TestCases\unitTests\10\test33.tex" />
+    <Content Include="part3TestCases\unitTests\10\test34.tex" />
+    <Content Include="part3TestCases\unitTests\10\test35.tex" />
+    <Content Include="part3TestCases\unitTests\10\test36.tex" />
+    <Content Include="part3TestCases\unitTests\10\test37.tex" />
+    <Content Include="part3TestCases\unitTests\10\test38.tex" />
+    <Content Include="part3TestCases\unitTests\10\test39.tex" />
+    <Content Include="part3TestCases\unitTests\10\test4.tex" />
+    <Content Include="part3TestCases\unitTests\10\test40.tex" />
+    <Content Include="part3TestCases\unitTests\10\test41.tex" />
+    <Content Include="part3TestCases\unitTests\10\test42.tex" />
+    <Content Include="part3TestCases\unitTests\10\test43.tex" />
+    <Content Include="part3TestCases\unitTests\10\test44.tex" />
+    <Content Include="part3TestCases\unitTests\10\test45.tex" />
+    <Content Include="part3TestCases\unitTests\10\test46.tex" />
+    <Content Include="part3TestCases\unitTests\10\test47.tex" />
+    <Content Include="part3TestCases\unitTests\10\test48.tex" />
+    <Content Include="part3TestCases\unitTests\10\test49.tex" />
+    <Content Include="part3TestCases\unitTests\10\test5.tex" />
+    <Content Include="part3TestCases\unitTests\10\test50.tex" />
+    <Content Include="part3TestCases\unitTests\10\test51.tex" />
+    <Content Include="part3TestCases\unitTests\10\test52.tex" />
+    <Content Include="part3TestCases\unitTests\10\test53.tex" />
+    <Content Include="part3TestCases\unitTests\10\test54.tex" />
+    <Content Include="part3TestCases\unitTests\10\test55.tex" />
+    <Content Include="part3TestCases\unitTests\10\test56.tex" />
+    <Content Include="part3TestCases\unitTests\10\test57.tex" />
+    <Content Include="part3TestCases\unitTests\10\test58.tex" />
+    <Content Include="part3TestCases\unitTests\10\test59.tex" />
+    <Content Include="part3TestCases\unitTests\10\test6.tex" />
+    <Content Include="part3TestCases\unitTests\10\test60.tex" />
+    <Content Include="part3TestCases\unitTests\10\test61.tex" />
+    <Content Include="part3TestCases\unitTests\10\test62.tex" />
+    <Content Include="part3TestCases\unitTests\10\test63.tex" />
+    <Content Include="part3TestCases\unitTests\10\test64.tex" />
+    <Content Include="part3TestCases\unitTests\10\test65.tex" />
+    <Content Include="part3TestCases\unitTests\10\test66.tex" />
+    <Content Include="part3TestCases\unitTests\10\test67.tex" />
+    <Content Include="part3TestCases\unitTests\10\test68.tex" />
+    <Content Include="part3TestCases\unitTests\10\test69.tex" />
+    <Content Include="part3TestCases\unitTests\10\test7.tex" />
+    <Content Include="part3TestCases\unitTests\10\test70.tex" />
+    <Content Include="part3TestCases\unitTests\10\test71.tex" />
+    <Content Include="part3TestCases\unitTests\10\test72.tex" />
+    <Content Include="part3TestCases\unitTests\10\test73.tex" />
+    <Content Include="part3TestCases\unitTests\10\test74.tex" />
+    <Content Include="part3TestCases\unitTests\10\test75.tex" />
+    <Content Include="part3TestCases\unitTests\10\test76.tex" />
+    <Content Include="part3TestCases\unitTests\10\test77.tex" />
+    <Content Include="part3TestCases\unitTests\10\test78.tex" />
+    <Content Include="part3TestCases\unitTests\10\test79.tex" />
+    <Content Include="part3TestCases\unitTests\10\test8.tex" />
+    <Content Include="part3TestCases\unitTests\10\test80.tex" />
+    <Content Include="part3TestCases\unitTests\10\test81.tex" />
+    <Content Include="part3TestCases\unitTests\10\test82.tex" />
+    <Content Include="part3TestCases\unitTests\10\test83.tex" />
+    <Content Include="part3TestCases\unitTests\10\test84.tex" />
+    <Content Include="part3TestCases\unitTests\10\test85.tex" />
+    <Content Include="part3TestCases\unitTests\10\test86.tex" />
+    <Content Include="part3TestCases\unitTests\10\test87.tex" />
+    <Content Include="part3TestCases\unitTests\10\test88.tex" />
+    <Content Include="part3TestCases\unitTests\10\test89.tex" />
+    <Content Include="part3TestCases\unitTests\10\test9.tex" />
+    <Content Include="part3TestCases\unitTests\10\test90.tex" />
+    <Content Include="part3TestCases\unitTests\10\test91.tex" />
+    <Content Include="part3TestCases\unitTests\10\test92.tex" />
+    <Content Include="part3TestCases\unitTests\10\test93.tex" />
+    <Content Include="part3TestCases\unitTests\10\test94.tex" />
+    <Content Include="part3TestCases\unitTests\10\test95.tex" />
+    <Content Include="part3TestCases\unitTests\10\test96.tex" />
+    <Content Include="part3TestCases\unitTests\10\test97.tex" />
+    <Content Include="part3TestCases\unitTests\10\test98.tex" />
+    <Content Include="part3TestCases\unitTests\10\test99.tex" />
+    <Content Include="part3TestCases\unitTests\20\preamble.tex" />
+    <Content Include="part3TestCases\unitTests\20\test0.tex" />
+    <Content Include="part3TestCases\unitTests\20\test1.tex" />
+    <Content Include="part3TestCases\unitTests\20\test10.tex" />
+    <Content Include="part3TestCases\unitTests\20\test11.tex" />
+    <Content Include="part3TestCases\unitTests\20\test12.tex" />
+    <Content Include="part3TestCases\unitTests\20\test13.tex" />
+    <Content Include="part3TestCases\unitTests\20\test14.tex" />
+    <Content Include="part3TestCases\unitTests\20\test15.tex" />
+    <Content Include="part3TestCases\unitTests\20\test16.tex" />
+    <Content Include="part3TestCases\unitTests\20\test17.tex" />
+    <Content Include="part3TestCases\unitTests\20\test18.tex" />
+    <Content Include="part3TestCases\unitTests\20\test19.tex" />
+    <Content Include="part3TestCases\unitTests\20\test2.tex" />
+    <Content Include="part3TestCases\unitTests\20\test20.tex" />
+    <Content Include="part3TestCases\unitTests\20\test21.tex" />
+    <Content Include="part3TestCases\unitTests\20\test22.tex" />
+    <Content Include="part3TestCases\unitTests\20\test23.tex" />
+    <Content Include="part3TestCases\unitTests\20\test24.tex" />
+    <Content Include="part3TestCases\unitTests\20\test25.tex" />
+    <Content Include="part3TestCases\unitTests\20\test26.tex" />
+    <Content Include="part3TestCases\unitTests\20\test27.tex" />
+    <Content Include="part3TestCases\unitTests\20\test28.tex" />
+    <Content Include="part3TestCases\unitTests\20\test29.tex" />
+    <Content Include="part3TestCases\unitTests\20\test3.tex" />
+    <Content Include="part3TestCases\unitTests\20\test30.tex" />
+    <Content Include="part3TestCases\unitTests\20\test31.tex" />
+    <Content Include="part3TestCases\unitTests\20\test32.tex" />
+    <Content Include="part3TestCases\unitTests\20\test33.tex" />
+    <Content Include="part3TestCases\unitTests\20\test34.tex" />
+    <Content Include="part3TestCases\unitTests\20\test35.tex" />
+    <Content Include="part3TestCases\unitTests\20\test36.tex" />
+    <Content Include="part3TestCases\unitTests\20\test37.tex" />
+    <Content Include="part3TestCases\unitTests\20\test38.tex" />
+    <Content Include="part3TestCases\unitTests\20\test39.tex" />
+    <Content Include="part3TestCases\unitTests\20\test4.tex" />
+    <Content Include="part3TestCases\unitTests\20\test40.tex" />
+    <Content Include="part3TestCases\unitTests\20\test41.tex" />
+    <Content Include="part3TestCases\unitTests\20\test42.tex" />
+    <Content Include="part3TestCases\unitTests\20\test43.tex" />
+    <Content Include="part3TestCases\unitTests\20\test44.tex" />
+    <Content Include="part3TestCases\unitTests\20\test45.tex" />
+    <Content Include="part3TestCases\unitTests\20\test46.tex" />
+    <Content Include="part3TestCases\unitTests\20\test47.tex" />
+    <Content Include="part3TestCases\unitTests\20\test48.tex" />
+    <Content Include="part3TestCases\unitTests\20\test49.tex" />
+    <Content Include="part3TestCases\unitTests\20\test5.tex" />
+    <Content Include="part3TestCases\unitTests\20\test50.tex" />
+    <Content Include="part3TestCases\unitTests\20\test51.tex" />
+    <Content Include="part3TestCases\unitTests\20\test52.tex" />
+    <Content Include="part3TestCases\unitTests\20\test53.tex" />
+    <Content Include="part3TestCases\unitTests\20\test54.tex" />
+    <Content Include="part3TestCases\unitTests\20\test55.tex" />
+    <Content Include="part3TestCases\unitTests\20\test56.tex" />
+    <Content Include="part3TestCases\unitTests\20\test57.tex" />
+    <Content Include="part3TestCases\unitTests\20\test58.tex" />
+    <Content Include="part3TestCases\unitTests\20\test59.tex" />
+    <Content Include="part3TestCases\unitTests\20\test6.tex" />
+    <Content Include="part3TestCases\unitTests\20\test60.tex" />
+    <Content Include="part3TestCases\unitTests\20\test61.tex" />
+    <Content Include="part3TestCases\unitTests\20\test62.tex" />
+    <Content Include="part3TestCases\unitTests\20\test63.tex" />
+    <Content Include="part3TestCases\unitTests\20\test64.tex" />
+    <Content Include="part3TestCases\unitTests\20\test65.tex" />
+    <Content Include="part3TestCases\unitTests\20\test66.tex" />
+    <Content Include="part3TestCases\unitTests\20\test67.tex" />
+    <Content Include="part3TestCases\unitTests\20\test68.tex" />
+    <Content Include="part3TestCases\unitTests\20\test69.tex" />
+    <Content Include="part3TestCases\unitTests\20\test7.tex" />
+    <Content Include="part3TestCases\unitTests\20\test70.tex" />
+    <Content Include="part3TestCases\unitTests\20\test71.tex" />
+    <Content Include="part3TestCases\unitTests\20\test72.tex" />
+    <Content Include="part3TestCases\unitTests\20\test73.tex" />
+    <Content Include="part3TestCases\unitTests\20\test74.tex" />
+    <Content Include="part3TestCases\unitTests\20\test75.tex" />
+    <Content Include="part3TestCases\unitTests\20\test76.tex" />
+    <Content Include="part3TestCases\unitTests\20\test77.tex" />
+    <Content Include="part3TestCases\unitTests\20\test78.tex" />
+    <Content Include="part3TestCases\unitTests\20\test79.tex" />
+    <Content Include="part3TestCases\unitTests\20\test8.tex" />
+    <Content Include="part3TestCases\unitTests\20\test80.tex" />
+    <Content Include="part3TestCases\unitTests\20\test81.tex" />
+    <Content Include="part3TestCases\unitTests\20\test82.tex" />
+    <Content Include="part3TestCases\unitTests\20\test83.tex" />
+    <Content Include="part3TestCases\unitTests\20\test84.tex" />
+    <Content Include="part3TestCases\unitTests\20\test85.tex" />
+    <Content Include="part3TestCases\unitTests\20\test86.tex" />
+    <Content Include="part3TestCases\unitTests\20\test87.tex" />
+    <Content Include="part3TestCases\unitTests\20\test88.tex" />
+    <Content Include="part3TestCases\unitTests\20\test89.tex" />
+    <Content Include="part3TestCases\unitTests\20\test9.tex" />
+    <Content Include="part3TestCases\unitTests\20\test90.tex" />
+    <Content Include="part3TestCases\unitTests\20\test91.tex" />
+    <Content Include="part3TestCases\unitTests\20\test92.tex" />
+    <Content Include="part3TestCases\unitTests\20\test93.tex" />
+    <Content Include="part3TestCases\unitTests\20\test94.tex" />
+    <Content Include="part3TestCases\unitTests\20\test95.tex" />
+    <Content Include="part3TestCases\unitTests\20\test96.tex" />
+    <Content Include="part3TestCases\unitTests\20\test97.tex" />
+    <Content Include="part3TestCases\unitTests\20\test98.tex" />
+    <Content Include="part3TestCases\unitTests\20\test99.tex" />
+    <Content Include="part3TestCases\unitTests\50\preamble.tex" />
+    <Content Include="part3TestCases\unitTests\50\test0.tex" />
+    <Content Include="part3TestCases\unitTests\50\test1.tex" />
+    <Content Include="part3TestCases\unitTests\50\test10.tex" />
+    <Content Include="part3TestCases\unitTests\50\test11.tex" />
+    <Content Include="part3TestCases\unitTests\50\test12.tex" />
+    <Content Include="part3TestCases\unitTests\50\test13.tex" />
+    <Content Include="part3TestCases\unitTests\50\test14.tex" />
+    <Content Include="part3TestCases\unitTests\50\test15.tex" />
+    <Content Include="part3TestCases\unitTests\50\test16.tex" />
+    <Content Include="part3TestCases\unitTests\50\test17.tex" />
+    <Content Include="part3TestCases\unitTests\50\test18.tex" />
+    <Content Include="part3TestCases\unitTests\50\test19.tex" />
+    <Content Include="part3TestCases\unitTests\50\test2.tex" />
+    <Content Include="part3TestCases\unitTests\50\test20.tex" />
+    <Content Include="part3TestCases\unitTests\50\test21.tex" />
+    <Content Include="part3TestCases\unitTests\50\test22.tex" />
+    <Content Include="part3TestCases\unitTests\50\test23.tex" />
+    <Content Include="part3TestCases\unitTests\50\test24.tex" />
+    <Content Include="part3TestCases\unitTests\50\test25.tex" />
+    <Content Include="part3TestCases\unitTests\50\test26.tex" />
+    <Content Include="part3TestCases\unitTests\50\test27.tex" />
+    <Content Include="part3TestCases\unitTests\50\test28.tex" />
+    <Content Include="part3TestCases\unitTests\50\test29.tex" />
+    <Content Include="part3TestCases\unitTests\50\test3.tex" />
+    <Content Include="part3TestCases\unitTests\50\test30.tex" />
+    <Content Include="part3TestCases\unitTests\50\test31.tex" />
+    <Content Include="part3TestCases\unitTests\50\test32.tex" />
+    <Content Include="part3TestCases\unitTests\50\test33.tex" />
+    <Content Include="part3TestCases\unitTests\50\test34.tex" />
+    <Content Include="part3TestCases\unitTests\50\test35.tex" />
+    <Content Include="part3TestCases\unitTests\50\test36.tex" />
+    <Content Include="part3TestCases\unitTests\50\test37.tex" />
+    <Content Include="part3TestCases\unitTests\50\test38.tex" />
+    <Content Include="part3TestCases\unitTests\50\test39.tex" />
+    <Content Include="part3TestCases\unitTests\50\test4.tex" />
+    <Content Include="part3TestCases\unitTests\50\test40.tex" />
+    <Content Include="part3TestCases\unitTests\50\test41.tex" />
+    <Content Include="part3TestCases\unitTests\50\test42.tex" />
+    <Content Include="part3TestCases\unitTests\50\test43.tex" />
+    <Content Include="part3TestCases\unitTests\50\test44.tex" />
+    <Content Include="part3TestCases\unitTests\50\test45.tex" />
+    <Content Include="part3TestCases\unitTests\50\test46.tex" />
+    <Content Include="part3TestCases\unitTests\50\test47.tex" />
+    <Content Include="part3TestCases\unitTests\50\test48.tex" />
+    <Content Include="part3TestCases\unitTests\50\test49.tex" />
+    <Content Include="part3TestCases\unitTests\50\test5.tex" />
+    <Content Include="part3TestCases\unitTests\50\test50.tex" />
+    <Content Include="part3TestCases\unitTests\50\test51.tex" />
+    <Content Include="part3TestCases\unitTests\50\test52.tex" />
+    <Content Include="part3TestCases\unitTests\50\test53.tex" />
+    <Content Include="part3TestCases\unitTests\50\test54.tex" />
+    <Content Include="part3TestCases\unitTests\50\test55.tex" />
+    <Content Include="part3TestCases\unitTests\50\test56.tex" />
+    <Content Include="part3TestCases\unitTests\50\test57.tex" />
+    <Content Include="part3TestCases\unitTests\50\test58.tex" />
+    <Content Include="part3TestCases\unitTests\50\test59.tex" />
+    <Content Include="part3TestCases\unitTests\50\test6.tex" />
+    <Content Include="part3TestCases\unitTests\50\test60.tex" />
+    <Content Include="part3TestCases\unitTests\50\test61.tex" />
+    <Content Include="part3TestCases\unitTests\50\test62.tex" />
+    <Content Include="part3TestCases\unitTests\50\test63.tex" />
+    <Content Include="part3TestCases\unitTests\50\test64.tex" />
+    <Content Include="part3TestCases\unitTests\50\test65.tex" />
+    <Content Include="part3TestCases\unitTests\50\test66.tex" />
+    <Content Include="part3TestCases\unitTests\50\test67.tex" />
+    <Content Include="part3TestCases\unitTests\50\test68.tex" />
+    <Content Include="part3TestCases\unitTests\50\test69.tex" />
+    <Content Include="part3TestCases\unitTests\50\test7.tex" />
+    <Content Include="part3TestCases\unitTests\50\test70.tex" />
+    <Content Include="part3TestCases\unitTests\50\test71.tex" />
+    <Content Include="part3TestCases\unitTests\50\test72.tex" />
+    <Content Include="part3TestCases\unitTests\50\test73.tex" />
+    <Content Include="part3TestCases\unitTests\50\test74.tex" />
+    <Content Include="part3TestCases\unitTests\50\test75.tex" />
+    <Content Include="part3TestCases\unitTests\50\test76.tex" />
+    <Content Include="part3TestCases\unitTests\50\test77.tex" />
+    <Content Include="part3TestCases\unitTests\50\test78.tex" />
+    <Content Include="part3TestCases\unitTests\50\test79.tex" />
+    <Content Include="part3TestCases\unitTests\50\test8.tex" />
+    <Content Include="part3TestCases\unitTests\50\test80.tex" />
+    <Content Include="part3TestCases\unitTests\50\test81.tex" />
+    <Content Include="part3TestCases\unitTests\50\test82.tex" />
+    <Content Include="part3TestCases\unitTests\50\test83.tex" />
+    <Content Include="part3TestCases\unitTests\50\test84.tex" />
+    <Content Include="part3TestCases\unitTests\50\test85.tex" />
+    <Content Include="part3TestCases\unitTests\50\test86.tex" />
+    <Content Include="part3TestCases\unitTests\50\test87.tex" />
+    <Content Include="part3TestCases\unitTests\50\test88.tex" />
+    <Content Include="part3TestCases\unitTests\50\test89.tex" />
+    <Content Include="part3TestCases\unitTests\50\test9.tex" />
+    <Content Include="part3TestCases\unitTests\50\test90.tex" />
+    <Content Include="part3TestCases\unitTests\50\test91.tex" />
+    <Content Include="part3TestCases\unitTests\50\test92.tex" />
+    <Content Include="part3TestCases\unitTests\50\test93.tex" />
+    <Content Include="part3TestCases\unitTests\50\test94.tex" />
+    <Content Include="part3TestCases\unitTests\50\test95.tex" />
+    <Content Include="part3TestCases\unitTests\50\test96.tex" />
+    <Content Include="part3TestCases\unitTests\50\test97.tex" />
+    <Content Include="part3TestCases\unitTests\50\test98.tex" />
+    <Content Include="part3TestCases\unitTests\50\test99.tex" />
+  </ItemGroup>
+  <Choose>
+    <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
+      <ItemGroup>
+        <Reference Include="Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="Microsoft.VisualStudio.TestTools.UITest.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="Microsoft.VisualStudio.TestTools.UITest.Extension, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="Microsoft.VisualStudio.TestTools.UITesting, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+      </ItemGroup>
+    </When>
+  </Choose>
+  <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
